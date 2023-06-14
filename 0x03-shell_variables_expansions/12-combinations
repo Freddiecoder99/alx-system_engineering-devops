@@ -1,2 +1,2 @@
 #!/bin/bash
-echo -e "aa\n$(paste -d "" <(echo {a..z}) <(echo {a..z}) | grep -v "oo")"
+for i in {a..z}; do for j in {a..z}; do [[ $i$j != oo ]] && echo $i$j; done; done
