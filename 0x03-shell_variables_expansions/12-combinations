@@ -1,4 +1,2 @@
 #!/bin/bash
-echo {a..z}{a..z} | tr -s " " "\n" | grep -v "oo"
-
-
+echo -e "aa\n$(paste -d "" <(echo {a..z}) <(echo {a..z}) | grep -v "oo")"
