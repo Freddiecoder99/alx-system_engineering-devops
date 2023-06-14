@@ -1,3 +1,4 @@
 #!/bin/bash
-paste -d "" <(echo {a..z}) <(echo {a..z}) | grep -v "oo"
+echo {a..z}{a..z} | tr -s " " "\n" | grep -v "oo"
+
 
